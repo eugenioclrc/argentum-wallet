@@ -7,10 +7,19 @@
 
 	import { onMount } from 'svelte';
 
+	import { loadWallet } from '$lib/shared';
+	import { goto } from '$app/navigation';
+	
 	let receiver;
 	let amount;
 
 	onMount(() => {
+		loadWallet();
+
+		if ($wallet == '') {
+			alert('error generating wallet');
+			goto('/');
+		}
 		// Get query string from URL
 		const urlParams = new URLSearchParams(window.location.search);
 		let payment = urlParams.get('payment') || '';
