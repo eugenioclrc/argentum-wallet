@@ -46,7 +46,7 @@
 			//filter: filter,
 			imageSize: 1000,
 			filter: 'color',
-			version: 10,
+			//version: 10,
 			//var imageSize = 75 + (version * 12) - 24;
 			bg: '#FFF',
 			//var size = "175";
@@ -116,9 +116,9 @@
 	}
 </script>
 
-
+{#if modal}
 	<!-- Modal -->
-	<modal class:hidden={!modal} class="fixed inset-0 h-full w-full overflow-y-auto bg-gray-600 bg-opacity-50">
+	<modal class="fixed inset-0 h-full w-full overflow-y-auto bg-gray-600 bg-opacity-50">
 		<div class="relative top-20 mx-auto w-96 rounded-md border bg-white p-5 shadow-lg">
 			<div class="mt-3 text-center">
 				<h3 class="text-lg font-medium leading-6 text-gray-900">Receive USDC</h3>
@@ -243,6 +243,5 @@
 			</div>
 		</div>
 	</modal>
-
-
+{/if}
 <div class="hidden" id="qart" bind:this={qartEl} />

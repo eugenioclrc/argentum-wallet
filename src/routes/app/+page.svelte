@@ -9,7 +9,7 @@
 
 	import { loadWallet } from '$lib/shared';
 	import { goto } from '$app/navigation';
-	
+
 	let receiver;
 	let amount;
 
@@ -20,22 +20,23 @@
 			alert('error generating wallet');
 			goto('/');
 		}
-		// Get query string from URL
-		const urlParams = new URLSearchParams(window.location.search);
-		let payment = urlParams.get('payment') || '';
-		receiver = payment.split('?')[0].replace('ethereum:', '');
-		amount = String(formatEther(payment.split('?value=')[1]));
+		try{
+			// Get query string from URL
+			const urlParams = new URLSearchParams(window.location.search);
+			let payment = urlParams.get('payment') || '';
+			receiver = payment.split('?')[0].replace('ethereum:', '');
+			amount = String(formatEther(payment.split('?value=')[1]));
 
-		if (receiver && amount) {
-			modalSend = true;
-		}
+			if (receiver && amount) {
+				modalSend = true;
+			}
+		} catch(err) {}
 	});
 
 	//import QArt from 'qartjs';
 
 	let modal = false;
 	let modalSend = false;
-	let quiet;
 </script>
 
 <div class="mx-auto h-screen max-w-md bg-gray-100 p-6">
