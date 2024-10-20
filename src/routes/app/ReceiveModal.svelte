@@ -41,8 +41,8 @@
 
 		const qart = new window.QArt({
 			value: getPaymentDataUrl(),
-			//imagePath: './landing.png',
-			imagePath: './logo.png',
+			imagePath: './landing.png',
+			//imagePath: './logo.png',
 			//filter: filter,
 			imageSize: 1000,
 			filter: 'color',
