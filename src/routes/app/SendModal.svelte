@@ -70,7 +70,7 @@
 
 		// uniq data
 		chunks = [...new Set(chunks)];
-
+        console.log(chunks)
 		if (chunks.length > 2) {
 			let newData = transformArray(chunks);
 			console.log(chunks, newData);

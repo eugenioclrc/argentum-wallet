@@ -70,9 +70,12 @@
 		let val = Number(amountToReceive).toFixed(2).replace('.', '');
 
 		let data = `ethereum:${$wallet}?value=${val}`;
+        //0xd8da6bf26964af9d7eed9e0
+        //1x3e53415d37aa96045
 
+        console.log(data)
 		await quiet.transmit({
-			clampFrame: true,
+			clampFrame: false,
 			payload: data
 		});
 		// idle 250 ms
