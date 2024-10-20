@@ -44,7 +44,6 @@
 			imagePath: './landing.png',
 			//imagePath: './logo.png',
 			//filter: filter,
-			imageSize: 1000,
 			filter: 'color',
 			//version: 10,
 			//var imageSize = 75 + (version * 12) - 24;
