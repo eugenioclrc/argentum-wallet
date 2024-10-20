@@ -66,6 +66,7 @@
 		if (elapsed < 1000) {
 			chunks = [];
 		}
+        lastReceived = +new Date();
 		chunks.push(data.value);
 
 		// uniq data

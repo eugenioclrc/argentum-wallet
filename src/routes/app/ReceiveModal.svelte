@@ -75,7 +75,7 @@
 
         console.log(data)
 		await quiet.transmit({
-			clampFrame: false,
+			clampFrame: true,
 			payload: data
 		});
 		// idle 250 ms
@@ -84,6 +84,10 @@
 		});
 
 		await quiet.transmit({
+			clampFrame: true,
+			payload: data
+		});
+        await quiet.transmit({
 			clampFrame: true,
 			payload: data
 		});
