@@ -245,3 +245,4 @@
 	</modal>
 {/if}
 <div class="hidden" id="qart" bind:this={qartEl} />
+<img class="hidden" src="/landing.png" />
