@@ -1,7 +1,9 @@
 <script>
 	import '../app.css';
-  
+
+	export const prerender = true;
 </script>
-<div class="bg-gray-800 w-full">
-  <slot />
+
+<div class="w-full bg-gray-800">
+	<slot />
 </div>

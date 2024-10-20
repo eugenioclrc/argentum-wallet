@@ -1,16 +1,18 @@
 <script>
-  import {onMount} from "svelte";
-  import {wallet, loadWallet} from "$lib/shared"
-  import { goto } from '$app/navigation';
-    
-    
-  onMount(() => {
-    loadWallet();
+	import { onMount } from 'svelte';
+	import { wallet, loadWallet } from '$lib/shared';
+	import { goto } from '$app/navigation';
 
-    if($wallet == '') {
-      alert("error generating wallet");
-      goto("/");
-    }
-  })
+	onMount(() => {
+		loadWallet();
+
+		if ($wallet == '') {
+			alert('error generating wallet');
+			goto('/');
+		}
+	});
+	export const prerender = true;
+
 </script>
+
 <slot />
